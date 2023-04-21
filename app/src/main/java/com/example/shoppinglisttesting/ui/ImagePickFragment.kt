@@ -25,10 +25,10 @@ import javax.inject.Inject
 
 @AndroidEntryPoint
 class ImagePickFragment @Inject constructor(
-    private val imageAdapter: ImageAdapter
+    val imageAdapter: ImageAdapter
 ) : Fragment(R.layout.fragment_image_pick) {
 
-    private lateinit var viewModel: ShoppingViewModel
+    lateinit var viewModel: ShoppingViewModel
     private lateinit var binding: FragmentImagePickBinding
 
     override fun onCreateView(

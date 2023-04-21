@@ -55,6 +55,8 @@ dependencies {
 
     // Room
     implementation "androidx.room:room-runtime:2.5.1"
+    implementation 'androidx.test.espresso:espresso-contrib:3.5.1'
+    debugImplementation 'androidx.fragment:fragment-testing:1.5.7'
     kapt "androidx.room:room-compiler:2.5.1"
 
     // Kotlin Extensions and Coroutines support for Room
@@ -114,6 +116,26 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     androidTestImplementation "org.mockito:mockito-core:2.25.0"
+
+    // For Robolectric tests.
+    testImplementation("com.google.dagger:hilt-android-testing:2.44")
+    // ...with Kotlin.
+    kaptTest("com.google.dagger:hilt-android-compiler:2.44")
+    // ...with Java.
+    testAnnotationProcessor("com.google.dagger:hilt-android-compiler:2.44")
+
+
+    // For instrumented tests.
+    androidTestImplementation("com.google.dagger:hilt-android-testing:2.44")
+    // ...with Kotlin.
+    kaptAndroidTest("com.google.dagger:hilt-android-compiler:2.44")
+    // ...with Java.
+    androidTestAnnotationProcessor("com.google.dagger:hilt-android-compiler:2.44")
+
+    androidTestImplementation 'com.google.dagger:hilt-android-testing:2.44'
+    kaptAndroidTest 'com.google.dagger:hilt-android-compiler:2.44'
+    androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.5.1'
+
 
     implementation 'androidx.work:work-runtime-ktx:2.8.1'
 }
